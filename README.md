@@ -42,7 +42,7 @@ This project was built using React, Redux, Chakra UI, HTML, CSS, JavaScript, Res
 ### Setup
 
 
-The project repository can be found in [GitHub link](https://github.com/m-sehrawat/Nike-Clone) or just clone the project using this command.
+The project repository can be found in [GitHub link](https://github.com/mehboobpatel/houseofsneakers) or just clone the project using this command.
 
 
 ```
