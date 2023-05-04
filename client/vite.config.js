@@ -1,7 +1,22 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+const path = require('path');
+import reactRefresh from '@vitejs/plugin-react-refresh'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()]
-})
+export default {
+  plugins: [reactRefresh()],
+  esbuild: {
+    jsxInject: `import React from 'react'`,
+  },
+  resolve: {
+    alias: {
+      // You can add more alias for the common directories used in your project
+      "@": path.resolve(__dirname, "src")
+    },
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "src/main.jsx")
+      }
+    }
+  }
+}
